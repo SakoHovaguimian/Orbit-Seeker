@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nP7-Fa-9r0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planet Selector View Controller-->
+        <scene sceneID="rJy-td-6nM">
+            <objects>
+                <viewController id="nP7-Fa-9r0" customClass="PlanetSelectorViewController" customModule="Orbit_Seeker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yyT-ms-8cv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nu5-2b-Y8s">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="0NZ-Ba-NDX" customClass="PlanetCell" customModule="Orbit_Seeker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0NZ-Ba-NDX" id="q9S-ZH-fvG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth Day" translatesAutoresizingMaskIntoConstraints="NO" id="Hpo-JP-4AL">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="191.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UCe-PB-a0i">
+                                                    <rect key="frame" x="35" y="61" width="305" height="78"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="60"/>
+                                                    <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hpo-JP-4AL" firstAttribute="leading" secondItem="q9S-ZH-fvG" secondAttribute="leading" constant="8" id="BaH-eW-PNX"/>
+                                                <constraint firstAttribute="bottom" secondItem="Hpo-JP-4AL" secondAttribute="bottom" constant="8" id="EBG-h9-SWm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UCe-PB-a0i" secondAttribute="trailing" constant="20" id="IfI-IH-l6Z"/>
+                                                <constraint firstItem="Hpo-JP-4AL" firstAttribute="top" secondItem="q9S-ZH-fvG" secondAttribute="top" id="J4p-fQ-DJF"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hpo-JP-4AL" secondAttribute="trailing" constant="8" id="PX6-YF-X0Z"/>
+                                                <constraint firstItem="UCe-PB-a0i" firstAttribute="centerX" secondItem="q9S-ZH-fvG" secondAttribute="centerX" id="WNV-xA-0ac"/>
+                                                <constraint firstItem="UCe-PB-a0i" firstAttribute="centerY" secondItem="q9S-ZH-fvG" secondAttribute="centerY" id="amD-RG-6FO"/>
+                                                <constraint firstItem="UCe-PB-a0i" firstAttribute="leading" secondItem="q9S-ZH-fvG" secondAttribute="leadingMargin" constant="20" id="m8P-6L-CjB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="planetImage" destination="Hpo-JP-4AL" id="WRr-0F-Wud"/>
+                                            <outlet property="planetLabel" destination="UCe-PB-a0i" id="NKS-Sb-V12"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nu5-2b-Y8s" firstAttribute="leading" secondItem="CnP-MK-kTN" secondAttribute="leading" id="MlG-Ef-YQq"/>
+                            <constraint firstItem="CnP-MK-kTN" firstAttribute="bottom" secondItem="Nu5-2b-Y8s" secondAttribute="bottom" id="XYl-0C-ov1"/>
+                            <constraint firstItem="Nu5-2b-Y8s" firstAttribute="top" secondItem="CnP-MK-kTN" secondAttribute="top" id="ppy-yx-8Ao"/>
+                            <constraint firstItem="CnP-MK-kTN" firstAttribute="trailing" secondItem="Nu5-2b-Y8s" secondAttribute="trailing" id="y7Z-U6-cP5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CnP-MK-kTN"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nu5-2b-Y8s" id="c5M-Kv-Qy3"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="toPlanet" id="Wmv-YH-Nxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vq1-At-OLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671" y="27"/>
+        </scene>
+        <!--Planet Viewer View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="PlanetViewerViewController" customModule="Orbit_Seeker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Earth Day" width="2048" height="1024"/>
+    </resources>
+</document>
